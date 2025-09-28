@@ -4,36 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regulasi - RSUD Dayakukraja Kota Bangun</title>
-  <link rel="stylesheet" href="asstes/style/style.css">
+  <link rel="stylesheet" href="assets/style/regulasi.css">
 </head>
 <body>
   <div class="card">
-    <!-- Logo -->
-    <img src="assets/images/logo4.png" alt="Logo RSUD" class="logo">
-
-    <!-- Judul -->
     <h2 class="title">Regulasi</h2>
-    <p class="subtitle">SOP & Kebijakan RSUD Dayakukraja Kota Bangun</p>
+    <p class="subtitle">Peraturan, Kebijakan, dan SOP RSUD Dayakukraja</p>
 
-    <!-- Isi Regulasi -->
-    <div class="content">
-      <ol>
-        <li>⚕ SOP Penerimaan Pasien Baru</li>
-        <li>⚕ SOP Penanganan Gawat Darurat</li>
-        <li>⚕ SOP Administrasi dan Rekam Medis</li>
-        <li>⚕ SOP Pengelolaan Obat & Alat Medis</li>
-        <li>⚕ SOP Pencegahan & Pengendalian Infeksi</li>
-        <li>⚕ SOP Etika & Perilaku Tenaga Kesehatan</li>
-      </ol>
-
-      <p style="margin-top:15px;">
-        Dokumen lengkap regulasi dapat diakses melalui unit administrasi RSUD Dayakukraja Kota Bangun 
-        atau diunduh pada menu <strong>Dokumen</strong>.
-      </p>
+    <!-- Filter / kategori (opsional) -->
+    <div class="filter">
+      <button class="filter-btn active" data-kategori="all">Semua</button>
+      <button class="filter-btn" data-kategori="UU">UU / Perundang-undangan</button>
+      <button class="filter-btn" data-kategori="SOP">SOP</button>
+      <button class="filter-btn" data-kategori="SK">SK / Keputusan</button>
     </div>
 
-    <!-- Tombol Kembali -->
-    <a href="index.html" class="btn">⬅ Kembali</a>
+    <!-- Daftar regulasi sebagai tabel -->
+    <table class="reg-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Jenis</th>
+          <th>Nama Regulasi</th>
+          <th>Tanggal</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-kategori="UU">
+          <td>1</td>
+          <td>NN/UU</td>
+          <td>UU No. 25 Tahun 2009 tentang Pelayanan Publik</td>
+          <td>01 Jan 2009</td>
+          <td><a href="link-ke-dokumen-uu.pdf" target="_blank">View / Download</a></td>
+        </tr>
+        <tr data-kategori="SK">
+          <td>2</td>
+          <td>SK</td>
+          <td>Keputusan Direktur No. XX Tahun XXXX</td>
+          <td>15 Maret 2022</td>
+          <td><a href="link-ke-dokumen-sk.pdf" target="_blank">View / Download</a></td>
+        </tr>
+        <tr data-kategori="SOP">
+          <td>3</td>
+          <td>SOP</td>
+          <td>SOP Penanganan Gawat Darurat</td>
+          <td>10 Mei 2023</td>
+          <td><a href="link-ke-dokumen-sop.pdf" target="_blank">View / Download</a></td>
+        </tr>
+        <!-- Tambahkan baris lainnya -->
+      </tbody>
+    </table>
+
+    <a href="index.html" class="btn-back">← Kembali</a>
   </div>
+
+  <script>
+    // Script filter kategori sederhana
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const rows = document.querySelectorAll('.reg-table tbody tr');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // aktifkan tombol
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const kategori = btn.getAttribute('data-kategori');
+        rows.forEach(r => {
+          if (kategori === 'all' || r.getAttribute('data-kategori') === kategori) {
+            r.style.display = '';
+          } else {
+            r.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
