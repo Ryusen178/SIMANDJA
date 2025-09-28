@@ -3,40 +3,54 @@ body {
   background: linear-gradient(to bottom, #f1faff, #ffffff);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   margin: 0;
+  padding: 30px;
 }
 
 .contact-card {
   background: #fff;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 800px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  max-width: 900px;
   width: 100%;
 }
 
 .title {
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #222;
 }
 
 .subtitle {
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.info {
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border-left: 4px solid #1e90ff;
 }
 
 .info p {
   font-size: 15px;
   margin: 8px 0;
+  color: #333;
 }
 
 .map-container {
   margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .contact-form {
@@ -44,7 +58,7 @@ body {
 }
 
 .contact-form h3 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 18px;
   color: #007bff;
 }
@@ -57,6 +71,13 @@ body {
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 14px;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1e90ff;
+  outline: none;
 }
 
 .contact-form button {
@@ -77,13 +98,14 @@ body {
 
 .btn-back {
   display: block;
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: center;
   padding: 10px;
   background: #1e90ff;
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
 .btn-back:hover {
