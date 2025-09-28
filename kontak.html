@@ -4,27 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontak - RSUD Dayakukraja Kota Bangun</title>
-  <link rel="stylesheet" href="asstes/style/style.css">
+  <link rel="stylesheet" href="assets/style/kontak.css">
 </head>
 <body>
-  <div class="card">
-    <!-- Logo -->
-    <img src="assets/images/logo4.png" alt="Logo RSUD" class="logo">
+  <div class="contact-card">
+    <h2 class="title">Kontak Kami</h2>
+    <p class="subtitle">Hubungi RSUD Dayakukraja Kota Bangun untuk informasi lebih lanjut</p>
 
-    <!-- Judul -->
-    <h2 class="title">Kontak</h2>
-    <p class="subtitle">Hubungi Saya</p>
-
-    <!-- Isi Kontak -->
-    <div class="content">
-      <p><strong>Email:</strong> <a href="mailto:emailanda@gmail.com">emailanda@gmail.com</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
-      <p><strong>Alamat:</strong> RSUD Dayakukraja Kota Bangun</p>
-      <p><strong>Jam Kerja:</strong> Senin - Jumat, 08.00 - 16.00 WITA</p>
+    <!-- Informasi kontak -->
+    <div class="info">
+      <p><strong>Alamat:</strong> Jl. Kesehatan No. 123, Kota Bangun, Kalimantan Timur</p>
+      <p><strong>Telepon:</strong> (0543) 123456 | IGD 24 Jam: 0812-3456-7890</p>
+      <p><strong>Email:</strong> info@rsuddayakukraja.go.id</p>
+      <p><strong>Jam Operasional:</strong> Senin - Jumat, 08:00 - 16:00 WITA</p>
     </div>
 
-    <!-- Tombol Kembali -->
-    <a href="index.html" class="btn">⬅ Kembali</a>
+    <!-- Google Maps -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.567076309707!2d116.8978!3d-0.2715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df6d9d9a0c8b7cf%3A0x7c5c123456789abc!2sRSUD%20Dayakukraja%20Kota%20Bangun!5e0!3m2!1sid!2sid!4v1700000000000"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Form Kontak -->
+    <form class="contact-form">
+      <h3>Kirim Pesan</h3>
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+
+    <!-- Tombol kembali -->
+    <a href="index.html" class="btn-back">← Kembali</a>
   </div>
 </body>
 </html>
+
