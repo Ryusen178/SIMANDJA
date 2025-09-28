@@ -200,6 +200,40 @@ footer {
   z-index: 1;
 }
 
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 480px) {
+  .card {
+    max-width: 90%;   /* biar tidak mepet layar */
+    padding: 20px;
+  }
+
+  .logo {
+    width: 60px; /* lebih kecil agar pas di HP */
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* Untuk tablet */
+@media (max-width: 768px) {
+  .card {
+    max-width: 80%;
+  }
+}
+
+
+
 
 
 
